@@ -5,6 +5,8 @@ import Search from "./navbar/search";
 import UserMenu from "./navbar/usermenu";
 import Avatar from "./Avatar";
 import MenuItem from "./navbar/menuitem";
+import Modal from "./modals/modal";
+import Button from "./Button";
 
 export {
     Navbar,
@@ -14,4 +16,6 @@ export {
     UserMenu,
     Avatar,
     MenuItem,
+    Modal,
+    Button,
 }
