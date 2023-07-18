@@ -7,6 +7,9 @@ import Avatar from "./Avatar";
 import MenuItem from "./navbar/menuitem";
 import Modal from "./modals/modal";
 import Button from "./Button";
+import RegisterModal from "./modals/registerModal";
+import Heading from "./Heading";
+import Input from "./inputs/input";
 
 export {
     Navbar,
@@ -18,4 +21,7 @@ export {
     MenuItem,
     Modal,
     Button,
+    RegisterModal,
+    Heading,
+    Input,
 }
