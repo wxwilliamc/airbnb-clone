@@ -71,7 +71,7 @@ const Modal:React.FC<ModalProps> = ({
 
   return (
     <>
-      {/* Modal Outline Position */}
+      {/* Modal Outline Position & z-index */}
       <div className="
         flex
         items-center
@@ -86,7 +86,7 @@ const Modal:React.FC<ModalProps> = ({
         bg-neutral-800/70
         "
       >
-        {/* Modal Inline Width/Height */}
+        {/* Modal Content Width/Height */}
         <div className="
           relative
           w-full
@@ -100,7 +100,7 @@ const Modal:React.FC<ModalProps> = ({
           md:h-auto
           "
         >
-          {/* Modal Open/CLose Animation */}
+          {/* Modal Open & CLose Animation */}
           {/* Content */}
           <div className={`
             translate
@@ -110,7 +110,7 @@ const Modal:React.FC<ModalProps> = ({
             ${showModal ? 'opacity-100' : 'opacity-0'}
             `}
           >
-            {/* Modal Overall Content */}
+            {/* Modal Content Layout Display */}
             <div className="
               translate
               h-full
