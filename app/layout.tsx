@@ -5,6 +5,8 @@ import { Nunito } from 'next/font/google'
 import { Navbar, RegisterModal, LoginModal } from './components'
 // Toaster
 import ToasterProvider from './providers/ToasterProvider'
+// Actions
+import getCurrentUser from './actions/getCurrentUser'
 
 const font = Nunito({ subsets: ['latin'] })
 
@@ -13,18 +15,19 @@ export const metadata: Metadata = {
   description: 'Created By William Chong Wen Xuan',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const currentUser = await getCurrentUser();
   return (
     <html lang="en">
       <body className={font.className}>
         <ToasterProvider />
         <LoginModal />
         <RegisterModal />
-        <Navbar />
+        <Navbar currentUser={currentUser}/>
         {children}
       </body>
     </html>

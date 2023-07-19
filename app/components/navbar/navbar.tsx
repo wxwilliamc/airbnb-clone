@@ -1,7 +1,15 @@
 "use client";
 
 import {Container, Logo, Search, UserMenu} from '..'
-const Navbar = () => {
+import { SafeUser } from '@/app/types';
+
+interface NavbarProps {
+  currentUser?: SafeUser | null
+}
+
+const Navbar:React.FC<NavbarProps> = ({
+  currentUser
+}) => {
   return (
     <>
       <div className="
@@ -29,7 +37,7 @@ const Navbar = () => {
             >
               <Logo />
               <Search />
-              <UserMenu />
+              <UserMenu currentUser={currentUser}/>
             </div>
           </Container>
         </div>
