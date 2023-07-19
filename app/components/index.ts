@@ -10,6 +10,7 @@ import Button from "./Button";
 import RegisterModal from "./modals/registerModal";
 import Heading from "./Heading";
 import Input from "./inputs/input";
+import LoginModal from "./modals/loginModal";
 
 export {
     Navbar,
@@ -24,4 +25,5 @@ export {
     RegisterModal,
     Heading,
     Input,
+    LoginModal,
 }
