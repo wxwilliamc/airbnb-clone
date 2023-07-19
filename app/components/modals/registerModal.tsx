@@ -1,21 +1,24 @@
 "use client";
-
+// Axios
 import axios from "axios";
+// React Icons
 import {AiFillGithub} from 'react-icons/ai'
 import {FcGoogle} from 'react-icons/fc'
-import { useCallback, useState } from "react";
+// React Module
+import { useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
-
+// Hooks
 import useRegisterModal from "@/app/hooks/useRegisterModal";
+// Components
 import {Modal, Heading, Input, Button} from "..";
-
+// Toaster
 import {toast} from 'react-hot-toast'
 
 const RegisterModal = () => {
     const registerModal = useRegisterModal();
     const [isLoading, setIsloading] = useState(false);
 
-    // hook form (useForm)
+    // react-hook-form
     const {
         register,
         handleSubmit,
@@ -30,13 +33,14 @@ const RegisterModal = () => {
         }
     });
 
-    // hook form (SubmitHandler)
+    // react-hook-form
     const onSubmit: SubmitHandler<FieldValues> = (data) => {
         setIsloading(true);
 
         axios.post('/api/register', data)
             .then(() => {
                 registerModal.onClose();
+                toast.success('Account Sign Up Successful');
             })
             .catch((error) => {
                 toast.error('Something went wrong');
