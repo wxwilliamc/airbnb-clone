@@ -13,6 +13,10 @@ import Input from "./inputs/input";
 import LoginModal from "./modals/loginModal";
 import Categories from "./navbar/categories";
 import CategoryBox from "./CategoryBox";
+import RentModal from "./modals/rentModal";
+import CategoryInput from "./inputs/categoryInput";
+import CountrySelect from "./inputs/countrySelect";
+import Map from "./Map";
 
 export {
     Navbar,
@@ -30,4 +34,8 @@ export {
     LoginModal,
     Categories,
     CategoryBox,
+    RentModal,
+    CategoryInput,
+    CountrySelect,
+    Map,
 }
