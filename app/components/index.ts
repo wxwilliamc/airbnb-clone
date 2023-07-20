@@ -17,6 +17,7 @@ import RentModal from "./modals/rentModal";
 import CategoryInput from "./inputs/categoryInput";
 import CountrySelect from "./inputs/countrySelect";
 import Map from "./Map";
+import Counter from "./inputs/counter";
 
 export {
     Navbar,
@@ -38,4 +39,5 @@ export {
     CategoryInput,
     CountrySelect,
     Map,
+    Counter,
 }
