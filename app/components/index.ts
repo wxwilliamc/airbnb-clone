@@ -11,6 +11,8 @@ import RegisterModal from "./modals/registerModal";
 import Heading from "./Heading";
 import Input from "./inputs/input";
 import LoginModal from "./modals/loginModal";
+import Categories from "./navbar/categories";
+import CategoryBox from "./CategoryBox";
 
 export {
     Navbar,
@@ -26,4 +28,6 @@ export {
     Heading,
     Input,
     LoginModal,
+    Categories,
+    CategoryBox,
 }
