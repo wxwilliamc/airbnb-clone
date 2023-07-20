@@ -7,7 +7,7 @@ const Logo = () => {
   const router = useRouter();
   return (
     <>
-      <Image 
+      <Image onClick={() => router.push('/')}
         src="/images/airbnb.png"
         alt="logo"
         height={100}
