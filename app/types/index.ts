@@ -1,6 +1,15 @@
 // Convert Date data types to String
+// The reason doing this is when we retrieve something from server side and pass to client side,
+// will caught some data types error
 
-import { User } from "@prisma/client";
+import { Listing, User } from "@prisma/client";
+
+export type SafeListing = Omit<
+    Listing,
+    'createdAt'
+> & {
+    createdAt: string
+}
 
 export type SafeUser = Omit<
     User,
