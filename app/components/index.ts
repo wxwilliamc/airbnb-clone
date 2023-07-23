@@ -22,6 +22,10 @@ import ImageUpload from "./inputs/imageUpload";
 import EmptyState from "./EmptyState";
 import ListingCard from "./listings/listingCard";
 import HeartButton from "./HeartButton";
+import ListingClient from "../listings/[listingId]/listingClient";
+import ListingHead from "./listings/listingHead";
+import ListingInfo from "./listings/listingInfo";
+import ListingCategory from "./listings/listingCategory";
 
 export {
     Navbar,
@@ -48,5 +52,9 @@ export {
     EmptyState,
     ListingCard,
     HeartButton,
+    ListingClient,
+    ListingHead,
+    ListingInfo,
+    ListingCategory,
 
 }
