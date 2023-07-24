@@ -14,3 +14,13 @@ html, body, :root {
     z-index: 0 !important
 }
 
+/* Calendar */
+.rdrMonth {
+    width: 100% !important
+}
+
+.rdrCalendarWrapper {
+    width: 100% !important;
+    font-size: 11px !important;
+}
+
