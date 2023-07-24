@@ -1,3 +1,5 @@
+// Call if user try to login
+
 import { create } from "zustand";
 
 interface LoginModalStore {

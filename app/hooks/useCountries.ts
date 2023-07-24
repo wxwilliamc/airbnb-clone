@@ -1,4 +1,4 @@
-"use client";
+// Call if anything related Map / Listing Location
 
 // world-countries
 import countries from "world-countries";

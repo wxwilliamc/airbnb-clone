@@ -1,9 +1,16 @@
-import axios from "axios";
-import { useRouter } from "next/navigation";
-import { useCallback, useMemo } from "react";
-import { toast } from "react-hot-toast";
-import { SafeUser } from "../types";
+// Call if enable / disable the favorite (Heart Button)
 
+// Axios
+import axios from "axios";
+// Next Module
+import { useRouter } from "next/navigation";
+// React Module
+import { useCallback, useMemo } from "react";
+// Toaster
+import { toast } from "react-hot-toast";
+// Types
+import { SafeUser } from "../types";
+// Hooks
 import useLoginModal from "./useLoginModal";
 
 interface IUseFavorite {
@@ -25,6 +32,7 @@ const useFavorite = ({
         return list.includes(listingId);
     }, [currentUser, listingId])
 
+    // Call if click on heart button
     const toggleFavorite = useCallback(async (
         e: React.MouseEvent<HTMLDivElement>
     ) => {

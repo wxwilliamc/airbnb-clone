@@ -1,3 +1,5 @@
+// Call if visitor try to register a new account
+
 import { create } from "zustand";
 
 interface RegisterModalStore {

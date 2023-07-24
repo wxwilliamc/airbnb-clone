@@ -1,3 +1,5 @@
+// Call if the user want to upload listing details
+
 import { create } from "zustand";
 
 interface RentModal {
