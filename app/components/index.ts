@@ -28,6 +28,7 @@ import ListingInfo from "./listings/listingInfo";
 import ListingCategory from "./listings/listingCategory";
 import ListingReservation from "./listings/listingReservation";
 import Calendar from "./inputs/calendar";
+import TripsClient from "../trips/tripsClient";
 
 export {
     Navbar,
@@ -60,5 +61,6 @@ export {
     ListingCategory,
     ListingReservation,
     Calendar,
+    TripsClient,
 
 }
