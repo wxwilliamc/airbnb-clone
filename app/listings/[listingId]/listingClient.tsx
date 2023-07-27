@@ -6,7 +6,7 @@ import { categories } from "@/app/components/navbar/categories";
 // Hooks
 import useLoginModal from "@/app/hooks/useLoginModal";
 // Types
-import { SafeListing, SafeUser } from "@/app/types"
+import { SafeListing, SafeReservation, SafeUser } from "@/app/types"
 // Prisma
 import { Reservation } from "@prisma/client"
 // axios
@@ -29,7 +29,7 @@ const initialDataRange = {
 }
 
 interface ListingClientProps {
-    reservations?: Reservation[]
+    reservations?: SafeReservation[]
     listing: SafeListing & {
         user: SafeUser
     };
