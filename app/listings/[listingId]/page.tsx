@@ -16,7 +16,10 @@ const ListingPage = async ({ params }: { params: IParams }) => {
 
     if(!listing){
         return (
-            <EmptyState />
+            <EmptyState 
+                title="No available listings"
+                subtitle="Try again later!"
+            />
         )
     }
 
