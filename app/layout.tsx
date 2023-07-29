@@ -2,7 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Nunito } from 'next/font/google'
 // Components
-import { Navbar, RegisterModal, LoginModal, RentModal } from './components'
+import { Navbar, RegisterModal, LoginModal, RentModal, SearchModal } from './components'
 // Toaster
 import ToasterProvider from './providers/ToasterProvider'
 // Actions
@@ -25,6 +25,7 @@ export default async function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <ToasterProvider />
+        <SearchModal />
         <RentModal />
         <LoginModal />
         <RegisterModal />

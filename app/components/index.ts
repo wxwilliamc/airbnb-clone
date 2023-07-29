@@ -32,6 +32,7 @@ import TripsClient from "../trips/tripsClient";
 import ReservationsClient from "../reservations/reservationsClient";
 import FavoritesClient from "../favorites/favoritesClient";
 import PropertiesClient from "../properties/propertiesClient";
+import SearchModal from "./modals/searchModal";
 
 export {
     Navbar,
@@ -68,4 +69,5 @@ export {
     ReservationsClient,
     FavoritesClient,
     PropertiesClient,
+    SearchModal,
 }
