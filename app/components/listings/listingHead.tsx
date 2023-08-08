@@ -14,9 +14,9 @@ interface ListingHeadProps {
     currentUser?: SafeUser | null
 }
 
-const ListingHead = ({
+const ListingHead:React.FC<ListingHeadProps> = ({
     title, locationValue, imageSrc, id, currentUser
-}: ListingHeadProps) => {
+}) => {
     
     const { getByValue } = useCountries();
 
