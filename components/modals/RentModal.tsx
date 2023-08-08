@@ -7,15 +7,15 @@ import { toast } from 'react-hot-toast';
 // Hooks
 import useRentModal from '@/app/hooks/useRentModal'
 // Components
-import Modal from './modal';
+import Modal from './Modal';
 import Heading from '../Heading';
-import CategoryInput from '../inputs/categoryInput';
-import CountrySelect from '../inputs/countrySelect';
-import Counter from '../inputs/counter';
-import ImageUpload from '../inputs/imageUpload';
-import Input from '../inputs/input';
+import CategoryInput from '../inputs/CategoryInput';
+import CountrySelect from '../inputs/CountrySelect';
+import Counter from '../inputs/Counter';
+import ImageUpload from '../inputs/ImageUpload';
+import Input from '../inputs/Input';
 // Categories Data
-import { categories } from '../navbar/categories';
+import { categoriesList } from '../navbar/categories';
 // Next Module
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
@@ -154,7 +154,7 @@ const RentModal = () => {
                 overflow-y-auto
                 '
             >
-                {categories.map((item) => (
+                {categoriesList.map((item) => (
                     <div key={item.label} className='col-span-1'>
                         <CategoryInput 
                             onClick={(category) => setCustomValue('category', category)}
