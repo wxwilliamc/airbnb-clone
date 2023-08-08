@@ -1,28 +1,24 @@
-"use client";
+'use client';
 
 import { useEffect } from "react";
-import EmptyState from "@/components/EmptyState";
 
-interface ErrorProps {
+import EmptyState from "@/app/components/EmptyState";
+
+interface ErrorStateProps {
   error: Error
 }
 
-const Error:React.FC<ErrorProps> = ({
-  error
-}) => {
-
+const ErrorState: React.FC<ErrorStateProps> = ({ error }) => {
   useEffect(() => {
-    console.error(error)
-  }, [error])
+    console.error(error);
+  }, [error]);
 
-  return (
-    <div>
-      <EmptyState 
-        title="Uh Oh"
-        subtitle="Something went wrong!"
-      />
-    </div>
-  )
+  return ( 
+    <EmptyState
+      title="Uh Oh"
+      subtitle="Something went wrong!"
+    />
+   );
 }
-
-export default Error
+ 
+export default ErrorState;

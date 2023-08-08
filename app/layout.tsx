@@ -1,23 +1,25 @@
-import './globals.css'
-import type { Metadata } from 'next'
 import { Nunito } from 'next/font/google'
-// Components
-import Navbar from '@/components/navbar/Navbar'
-import RegisterModal from '@/components/modals/RegisterModal'
-import LoginModal from '@/components/modals/LoginModal'
-import RentModal from '@/components/modals/RentModal'
-import SearchModal from '@/components/modals/SearchModal'
-// Toaster
-import ToasterProvider from '@/app/providers/ToasterProvider'
-// Actions
-import getCurrentUser from './actions/getCurrentUser'
 
-const font = Nunito({ subsets: ['latin'] })
+import Navbar from '@/app/components/navbar/Navbar';
+import LoginModal from '@/app/components/modals/LoginModal';
+import RegisterModal from '@/app/components/modals/RegisterModal';
+import SearchModal from '@/app/components/modals/SearchModal';
+import RentModal from '@/app/components/modals/RentModal';
 
-export const metadata: Metadata = {
-  title: 'Airbnb-Clone',
-  description: 'Created By William Chong Wen Xuan',
+import ToasterProvider from '@/app/providers/ToasterProvider';
+
+import './globals.css'
+import ClientOnly from './components/ClientOnly';
+import getCurrentUser from './actions/getCurrentUser';
+
+export const metadata = {
+  title: 'Airbnb',
+  description: 'Airbnb Clone',
 }
+
+const font = Nunito({ 
+  subsets: ['latin'], 
+});
 
 export default async function RootLayout({
   children,
@@ -25,17 +27,19 @@ export default async function RootLayout({
   children: React.ReactNode
 }) {
   const currentUser = await getCurrentUser();
+
   return (
     <html lang="en">
       <body className={font.className}>
-        <ToasterProvider />
-        <SearchModal />
-        <RentModal />
-        <LoginModal />
-        <RegisterModal />
-        <Navbar currentUser={currentUser}/>
-        
-        <div className='pb-20 pt-28'>
+        <ClientOnly>
+          <ToasterProvider />
+          <LoginModal />
+          <RegisterModal />
+          <SearchModal />
+          <RentModal />
+          <Navbar currentUser={currentUser} />
+        </ClientOnly>
+        <div className="pb-20 pt-28">
           {children}
         </div>
       </body>

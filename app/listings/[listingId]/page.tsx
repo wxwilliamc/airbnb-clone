@@ -1,38 +1,40 @@
-// Actions
+
 import getCurrentUser from "@/app/actions/getCurrentUser";
-import getListingById from "@/app/actions/getListingById"
+import getListingById from "@/app/actions/getListingById";
 import getReservations from "@/app/actions/getReservations";
-// Components
-import EmptyState from "@/components/EmptyState";
-import ListingClient from "./components/ListingClient";
+
+import ClientOnly from "@/app/components/ClientOnly";
+import EmptyState from "@/app/components/EmptyState";
+
+import ListingClient from "./ListingClient";
 
 interface IParams {
-    listingId?: string
+  listingId?: string;
 }
 
 const ListingPage = async ({ params }: { params: IParams }) => {
-    const listing = await getListingById(params);
-    const currentUser = await getCurrentUser();
-    const reservations = await getReservations(params);
 
-    if(!listing){
-        return (
-            <EmptyState 
-                title="No listings available"
-                subtitle="Try again later!"
-            />
-        )
-    }
+  const listing = await getListingById(params);
+  const reservations = await getReservations(params);
+  const currentUser = await getCurrentUser();
 
+  if (!listing) {
     return (
-        <div>
-            <ListingClient 
-                listing={listing}
-                currentUser={currentUser}
-                reservations={reservations}
-            />
-        </div>
-    )
-}
+      <ClientOnly>
+        <EmptyState />
+      </ClientOnly>
+    );
+  }
 
-export default ListingPage
+  return (
+    <ClientOnly>
+      <ListingClient
+        listing={listing}
+        reservations={reservations}
+        currentUser={currentUser}
+      />
+    </ClientOnly>
+  );
+}
+ 
+export default ListingPage;

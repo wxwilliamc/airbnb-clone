@@ -1,38 +1,47 @@
-import EmptyState from "@/components/EmptyState";
-import getCurrentUser from "../actions/getCurrentUser"
-import getReservations from "../actions/getReservations"
-import ReservationsClient from "./components/ReservationsClient";
 
-const ReservationPage = async () => {
-    const currentUser = await getCurrentUser();
+import EmptyState from "@/app/components/EmptyState";
+import ClientOnly from "@/app/components/ClientOnly";
 
-    if(!currentUser){
-        return (
-            <EmptyState 
-                title="Unauthorized"
-                subtitle="Please login"
-            />
-        )
-    }
+import getCurrentUser from "@/app/actions/getCurrentUser";
+import getReservations from "@/app/actions/getReservations";
 
-    const reservations = await getReservations({
-        authorId: currentUser.id
-    });
+import TripsClient from "./ReservationsClient";
 
-    if(reservations.length === 0){
-        <EmptyState 
-            title="No reservations found"
-            subtitle="No reservations have been made for this property."
+const ReservationsPage = async () => {
+  const currentUser = await getCurrentUser();
+
+  if (!currentUser) {
+    return (
+      <ClientOnly> 
+        <EmptyState
+          title="Unauthorized"
+          subtitle="Please login"
         />
-    }
+      </ClientOnly>
+    )
+  }
+
+  const reservations = await getReservations({ authorId: currentUser.id });
+
+  if (reservations.length === 0) {
+    return (
+      <ClientOnly>
+        <EmptyState
+          title="No reservations found"
+          subtitle="Looks like you have no reservations on your properties."
+        />
+      </ClientOnly>
+    );
+  }
+
   return (
-    <>
-        <ReservationsClient 
-            reservations={reservations}
-            currentUser={currentUser}
-        />
-    </>
-  )
+    <ClientOnly>
+      <TripsClient
+        reservations={reservations}
+        currentUser={currentUser}
+      />
+    </ClientOnly>
+  );
 }
-
-export default ReservationPage
+ 
+export default ReservationsPage;
