@@ -5,7 +5,8 @@ import { SafeUser } from "@/app/types";
 // React Icon
 import { IconType } from "react-icons";
 // Components
-import { Avatar, ListingCategory } from "..";
+import Avatar from "../Avatar";
+import ListingCategory from "./listingCategory";
 // Next Module
 import dynamic from "next/dynamic";
 
@@ -27,9 +28,9 @@ interface ListingInfoProps {
     locationValue: string
 }
 
-const ListingInfo:React.FC<ListingInfoProps> = ({
+const ListingInfo = ({
     user, category, description, roomCount, guestCount, bathroomCount, locationValue
-}) => {
+}: ListingInfoProps) => {
 
     const { getByValue } = useCountries();
     const coordinates = getByValue(locationValue)?.latlng;

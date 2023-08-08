@@ -4,7 +4,8 @@ import {AiOutlineMenu} from 'react-icons/ai'
 // React Module
 import { useCallback, useState } from 'react';
 // Component
-import {Avatar, MenuItem} from '..';
+import Avatar from '../Avatar';
+import MenuItem from './menuitem';
 // Hooks
 import useRegisterModal from '@/app/hooks/useRegisterModal';
 import useLoginModal from '@/app/hooks/useLoginModal';
@@ -19,9 +20,9 @@ interface usermenuProps {
     currentUser?: SafeUser | null
 }
 
-const UserMenu:React.FC<usermenuProps> = ({
+const UserMenu = ({
     currentUser
-}) => {
+}: usermenuProps) => {
     const registerModal = useRegisterModal();
     const loginModal = useLoginModal();
     const rentModal = useRentModal();

@@ -6,9 +6,9 @@ interface AvatarProps {
   profileImgUrl: string | null | undefined
 }
 
-const Avatar:React.FC<AvatarProps> = ({
+const Avatar = ({
   profileImgUrl
-}) => {
+}: AvatarProps) => {
   return (
     <>
         <div>

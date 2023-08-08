@@ -14,11 +14,11 @@ interface CategoryBoxProps {
     icon: IconType
 }
 
-const CategoryBox:React.FC<CategoryBoxProps> = ({
+const CategoryBox = ({
     label,
     selected,
     icon: Icon
-}) => {
+}: CategoryBoxProps) => {
     
     const router = useRouter();
     const params = useSearchParams();

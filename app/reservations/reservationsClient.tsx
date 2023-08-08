@@ -3,7 +3,9 @@
 import { SafeReservation, SafeUser } from "../types";
 import axios from "axios";
 import { useCallback, useState } from "react";
-import { Container, Heading, ListingCard, ListingInfo } from "../components";
+import Container from "@/app/components/Container"
+import Heading from "@/app/components/Heading"
+import ListingCard from "@/app/components/listings/listingCard"
 import { useRouter } from "next/navigation";
 import { toast } from "react-hot-toast";
 
@@ -12,10 +14,10 @@ interface ReservationsClientProps {
   currentUser: SafeUser | null
 }
 
-const ReservationsClient:React.FC<ReservationsClientProps> = ({
+const ReservationsClient = ({
   reservations,
   currentUser
-}) => {
+}: ReservationsClientProps) => {
 
   const router = useRouter();
   const [deletingId, setDeletingId] = useState('');

@@ -7,7 +7,13 @@ import { toast } from 'react-hot-toast';
 // Hooks
 import useRentModal from '@/app/hooks/useRentModal'
 // Components
-import { Modal, Heading, CategoryInput, CountrySelect, Counter, ImageUpload, Input } from '..'
+import Modal from './modal';
+import Heading from '../Heading';
+import CategoryInput from '../inputs/categoryInput';
+import CountrySelect from '../inputs/countrySelect';
+import Counter from '../inputs/counter';
+import ImageUpload from '../inputs/imageUpload';
+import Input from '../inputs/input';
 // Categories Data
 import { categories } from '../navbar/categories';
 // Next Module

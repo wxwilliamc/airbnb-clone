@@ -1,21 +1,19 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { Container, Heading, ListingCard } from "../components";
+import Container from "../components/Container";
+import Heading from "../components/Heading";
+import ListingCard from "../components/listings/listingCard";
 import { SafeListing, SafeUser } from "../types";
-import { useCallback, useState } from "react";
-import axios from "axios";
-import { toast } from "react-hot-toast";
 
 interface FavoritesClientProps {
     listings: SafeListing[]
     currentUser?: SafeUser | null
 }
 
-const FavoritesClient:React.FC<FavoritesClientProps> = ({
+const FavoritesClient = ({
     listings,
     currentUser
-}) => {
+}: FavoritesClientProps) => {
 
   return (
     <Container>

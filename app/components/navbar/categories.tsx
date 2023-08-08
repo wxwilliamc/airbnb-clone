@@ -1,7 +1,8 @@
 "use client";
 
 // Component
-import { Container, CategoryBox } from "..";
+import Container from "../Container";
+import CategoryBox from "../CategoryBox";
 // React Icon
 import { TbBeach, TbMountain, TbPool } from 'react-icons/tb'
 import { GiBarn, GiBoatFishing, GiCactus, GiCastle, GiCaveEntrance, GiForestCamp, GiIsland, GiWindmill } from 'react-icons/gi'

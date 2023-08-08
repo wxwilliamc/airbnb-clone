@@ -10,12 +10,12 @@ interface CounterProps {
     onChange: (value: number) => void
 }
 
-const Counter:React.FC<CounterProps> = ({
+const Counter = ({
     title,
     subtitle,
     value,
     onChange
-}) => {
+}: CounterProps) => {
 
     const onAdd = useCallback(() => {
         onChange(value + 1)

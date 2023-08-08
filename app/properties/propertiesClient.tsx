@@ -1,9 +1,11 @@
 "use client";
 
-import { SafeListing, SafeReservation, SafeUser } from "../types";
+import { SafeListing, SafeUser } from "../types";
 import axios from "axios";
 import { useCallback, useState } from "react";
-import { Container, Heading, ListingCard, ListingInfo } from "../components";
+import Container from "@/app/components/Container"
+import Heading from "@/app/components/Heading"
+import ListingCard from "@/app/components/listings/listingCard"
 import { useRouter } from "next/navigation";
 import { toast } from "react-hot-toast";
 
@@ -12,10 +14,10 @@ interface PropertiesClientProps {
   currentUser: SafeUser | null
 }
 
-const PropertiesClient:React.FC<PropertiesClientProps> = ({
+const PropertiesClient = ({
   listings,
   currentUser
-}) => {
+}: PropertiesClientProps) => {
 
   const router = useRouter();
   const [deletingId, setDeletingId] = useState('');

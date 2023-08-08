@@ -9,7 +9,6 @@ import dynamic from "next/dynamic";
 import CountrySelect, { CountrySelectValue } from "../inputs/countrySelect";
 import qs from "query-string";
 import { formatISO } from "date-fns";
-import { url } from "inspector";
 import Heading from "../Heading";
 import Calendar from "../inputs/calendar";
 import Counter from "../inputs/counter";

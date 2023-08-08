@@ -3,7 +3,6 @@
 import useCountries from "@/app/hooks/useCountries";
 // Types
 import { SafeListing, SafeReservation, SafeUser } from "@/app/types";
-import { Listing, Reservation } from "@prisma/client";
 // Next Module
 import { useRouter } from "next/navigation";
 import Image from "next/image";
@@ -15,7 +14,7 @@ import { format } from 'date-fns'
 import HeartButton from "../HeartButton";
 import Button from "../Button";
 
-interface listingCardProps {
+interface ListingCardProps {
     data: SafeListing;
     reservation?: SafeReservation;
     onAction?: (id: string) => void
@@ -25,7 +24,7 @@ interface listingCardProps {
     currentUser?: SafeUser | null
 }
 
-const ListingCard:React.FC<listingCardProps> = ({
+const ListingCard = ({
     data,
     reservation,
     onAction,
@@ -33,7 +32,7 @@ const ListingCard:React.FC<listingCardProps> = ({
     actionLabel,
     actionId = "",
     currentUser
-}) => {
+}: ListingCardProps) => {
 
     const router = useRouter();
 

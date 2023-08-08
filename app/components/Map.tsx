@@ -23,9 +23,9 @@ interface MapProps {
     center?: number[]
 }
 
-const Map:React.FC<MapProps> = ({
+const Map = ({
     center
-}) => {
+}: MapProps) => {
   return (
     // react-leaflet
     <MapContainer

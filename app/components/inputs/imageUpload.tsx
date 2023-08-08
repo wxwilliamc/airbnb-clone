@@ -18,10 +18,10 @@ interface ImageUploadProps {
   value: string
 }
 
-const ImageUpload:React.FC<ImageUploadProps> = ({
+const ImageUpload = ({
   onChange,
   value
-}) => {
+}: ImageUploadProps) => {
 
   const handleUpload = useCallback((result: any) => {
     onChange(result.info.secure_url)

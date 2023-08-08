@@ -10,7 +10,10 @@ import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 // Hooks
 import useRegisterModal from "@/app/hooks/useRegisterModal";
 // Components
-import {Modal, Heading, Input, Button, LoginModal} from "..";
+import Modal from "./modal";
+import Heading from "../Heading";
+import Input from "../inputs/input";
+import Button from "../Button";
 // Toaster
 import {toast} from 'react-hot-toast'
 // Next Auth

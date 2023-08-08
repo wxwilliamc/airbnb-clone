@@ -1,5 +1,6 @@
 // Components
-import { EmptyState, TripsClient } from "../components"
+import EmptyState from "@/app/components/EmptyState";
+import TripsClient from "./TripsClient";
 // Server Actions
 import getCurrentUser from "../actions/getCurrentUser"
 import getReservations from "../actions/getReservations"

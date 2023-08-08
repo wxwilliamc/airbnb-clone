@@ -1,7 +1,9 @@
 "use client";
 
 import { useRouter } from "next/navigation"
-import { Container, Heading, ListingCard } from "../components"
+import Container from "@/app/components/Container"
+import Heading from "@/app/components/Heading"
+import ListingCard from "@/app/components/listings/listingCard"
 import { SafeReservation, SafeUser } from "../types"
 import { useCallback, useState } from "react";
 import axios from "axios";
@@ -12,10 +14,10 @@ interface TripsClientProps {
     currentUser?: SafeUser | null
 }
 
-const TripsClient:React.FC<TripsClientProps> = ({
+const TripsClient = ({
     reservations,
     currentUser
-}) => {
+}: TripsClientProps) => {
 
     const router = useRouter();
     const [ deletingId, setDeletingId ] = useState('');

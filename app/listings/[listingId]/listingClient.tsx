@@ -1,14 +1,15 @@
 "use client";
 // Components
-import { Container, ListingHead, ListingInfo, ListingReservation } from "@/app/components";
+import Container from "@/app/components/Container";
+import ListingHead from "@/app/components/listings/listingHead";
+import ListingInfo from "@/app/components/listings/listingInfo";
+import ListingReservation from "@/app/components/listings/listingReservation";
 // Category Data
 import { categories } from "@/app/components/navbar/categories";
 // Hooks
 import useLoginModal from "@/app/hooks/useLoginModal";
 // Types
 import { SafeListing, SafeReservation, SafeUser } from "@/app/types"
-// Prisma
-import { Reservation } from "@prisma/client"
 // axios
 import axios from "axios";
 // date-fns
@@ -36,11 +37,11 @@ interface ListingClientProps {
     currentUser?: SafeUser | null
 }
 
-const ListingClient: React.FC<ListingClientProps> = ({
+const ListingClient = ({
     listing,
     currentUser,
     reservations = [],
-}) => {
+}: ListingClientProps) => {
 
     const loginModal = useLoginModal();
     const router = useRouter();

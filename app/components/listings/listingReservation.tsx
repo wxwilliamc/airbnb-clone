@@ -14,9 +14,9 @@ interface ListingReservationProps {
     disabledDates: Date[]
 }
 
-const ListingReservation:React.FC<ListingReservationProps> = ({
+const ListingReservation = ({
     price, totalPrice, onChangeDate, dateRange, onSubmit, disabledDates, disabled
-}) => {
+}: ListingReservationProps) => {
   return (
     <div className="
         bg-white

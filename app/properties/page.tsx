@@ -1,5 +1,6 @@
 
-import { EmptyState, PropertiesClient } from '../components'
+import EmptyState from "@/app/components/EmptyState";
+import PropertiesClient from "./PropertiesClient";
 import getCurrentUser from '../actions/getCurrentUser'
 import getListings from '../actions/getListing'
 

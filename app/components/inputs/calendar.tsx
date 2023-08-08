@@ -10,9 +10,9 @@ interface CalendarProps {
   disabledDates?: Date[]
 }
 
-const Calendar:React.FC<CalendarProps> = ({
+const Calendar = ({
   value, onChange, disabledDates
-}) => {
+}: CalendarProps) => {
   return (
     <>
       <DateRange 

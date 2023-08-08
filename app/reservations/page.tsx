@@ -1,4 +1,5 @@
-import { EmptyState, ReservationsClient } from "../components"
+import EmptyState from "@/app/components/EmptyState";
+import ReservationsClient from "./reservationsClient";
 import getCurrentUser from "../actions/getCurrentUser"
 import getReservations from "../actions/getReservations"
 

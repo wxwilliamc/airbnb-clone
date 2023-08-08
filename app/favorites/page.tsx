@@ -1,4 +1,6 @@
-import { EmptyState, FavoritesClient } from "../components"
+
+import EmptyState from "../components/EmptyState"
+import FavoritesClient from "./favoritesClient"
 // Actions
 import getCurrentUser from "../actions/getCurrentUser"
 import getFavoriteListings from "../actions/getFavoriteListings"

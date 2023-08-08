@@ -18,10 +18,10 @@ interface CountrySelectProps {
     onChange: (value: CountrySelectValue) => void;
 }
 
-const CountrySelect:React.FC<CountrySelectProps> = ({
+const CountrySelect = ({
     value,
     onChange,
-}) => {
+}: CountrySelectProps) => {
     const { getAll } = useCountries();
   return (
     <div>
