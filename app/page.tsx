@@ -1,11 +1,11 @@
 import getCurrentUser from "@/app/actions/getCurrentUser";
-import getListings, { IListingParams } from "@/app/actions/getListing";
+import getListings, { IListingsParams } from "@/app/actions/getListing";
 import Container from "@/components/Container";
 import EmptyState from "@/components/EmptyState";
 import ListingCard from "@/components/listings/ListingCard";
 
 interface HomeProps {
-  searchParams: IListingParams
+  searchParams: IListingsParams
 }
 
 const Home = async ({
