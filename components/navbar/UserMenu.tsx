@@ -5,7 +5,7 @@ import {AiOutlineMenu} from 'react-icons/ai'
 import { useCallback, useState } from 'react';
 // Component
 import Avatar from '../Avatar';
-import MenuItem from './menuitem';
+import MenuItem from './MenuItem';
 // Hooks
 import useRegisterModal from '@/app/hooks/useRegisterModal';
 import useLoginModal from '@/app/hooks/useLoginModal';
