@@ -1,10 +1,10 @@
 "use client";
 
-import Categories from './categories';
+import Categories from './Categories';
 import Container from '../Container';
-import Logo from './logo';
-import Search from './search';
-import UserMenu from './usermenu';
+import Logo from './Logo';
+import Search from './Search';
+import UserMenu from './UserMenu';
 import { SafeUser } from '@/app/types';
 
 interface NavbarProps {

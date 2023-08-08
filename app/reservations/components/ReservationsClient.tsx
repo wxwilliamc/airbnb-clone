@@ -1,6 +1,6 @@
 "use client";
 
-import { SafeReservation, SafeUser } from "../types";
+import { SafeReservation, SafeUser } from "../../types";
 import axios from "axios";
 import { useCallback, useState } from "react";
 import Container from "@/components/Container"
