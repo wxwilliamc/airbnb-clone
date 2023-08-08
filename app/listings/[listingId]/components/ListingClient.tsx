@@ -1,11 +1,11 @@
 "use client";
 // Components
-import Container from "@/app/components/Container";
-import ListingHead from "@/app/components/listings/ListingHead";
-import ListingInfo from "@/app/components/listings/ListingInfo";
-import ListingReservation from "@/app/components/listings/ListingReservation";
+import Container from "@/components/Container";
+import ListingHead from "@/components/listings/ListingHead";
+import ListingInfo from "@/components/listings/ListingInfo";
+import ListingReservation from "@/components/listings/ListingReservation";
 // Category Data
-import { categories } from "@/app/components/navbar/categories";
+import { categoriesList } from "@/components/navbar/Categories";
 // Hooks
 import useLoginModal from "@/app/hooks/useLoginModal";
 // Types
@@ -107,6 +107,7 @@ const ListingClient = ({
                 setTotalPrice(dayCount * listing.price)
             }else{
                 setTotalPrice(listing.price);
+
             }
         }
     }, [dateRange, listing.price])
@@ -114,7 +115,7 @@ const ListingClient = ({
     // Match the category label
     // If match, able to get the category icon & desc
     const category = useMemo(() => {
-        return categories.find((item) => item.label === listing.category)
+        return categoriesList.find((item) => item.label === listing.category)
     }, [listing.category])
 
     return (

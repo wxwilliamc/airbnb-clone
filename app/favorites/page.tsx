@@ -1,5 +1,6 @@
 
-import EmptyState from "../components/EmptyState"
+
+import EmptyState from "@/components/EmptyState";
 import FavoritesClient from "./favoritesClient"
 // Actions
 import getCurrentUser from "../actions/getCurrentUser"

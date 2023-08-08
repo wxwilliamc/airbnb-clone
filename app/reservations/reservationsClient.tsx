@@ -3,9 +3,9 @@
 import { SafeReservation, SafeUser } from "../types";
 import axios from "axios";
 import { useCallback, useState } from "react";
-import Container from "@/app/components/Container"
-import Heading from "@/app/components/Heading"
-import ListingCard from "@/app/components/listings/listingCard"
+import Container from "@/components/Container"
+import Heading from "@/components/Heading"
+import ListingCard from "@/components/listings/ListingCard"
 import { useRouter } from "next/navigation";
 import { toast } from "react-hot-toast";
 

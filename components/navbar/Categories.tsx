@@ -12,7 +12,7 @@ import { BsSnow } from 'react-icons/bs'
 import { IoDiamond } from 'react-icons/io5'
 import { usePathname, useSearchParams } from "next/navigation";
 
-export const categories = [
+export const categoriesList = [
   {
     label: 'Beach',
     icon: TbBeach,
@@ -112,7 +112,7 @@ const Categories = () => {
         overflow-x-auto
         "
       >
-        {categories.map((item) => (
+        {categoriesList.map((item) => (
           <CategoryBox 
             key={item.label}
             label={item.label}
