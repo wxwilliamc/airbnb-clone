@@ -38,7 +38,7 @@ const SearchModal = () => {
 
     const Map = useMemo(() => dynamic(() => import('../Map'), {
         ssr: false,
-    }), [location])
+    }), [])
 
     const onBack = useCallback(() => {
         setStep((value) => value - 1);
@@ -102,7 +102,7 @@ const SearchModal = () => {
         }
 
         return 'Back'
-    }, [])
+    }, [step])
   
     let bodyContent = (
         <div className="

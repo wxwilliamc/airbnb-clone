@@ -75,7 +75,7 @@ const RentModal = () => {
 
     const Map = useMemo(() => dynamic(() => import('../Map'), {
         ssr: false
-    }), [location])
+    }), [])
 
     // Apply on "onClick" / "onChange"
     const setCustomValue = (id: string, value: any) => {
