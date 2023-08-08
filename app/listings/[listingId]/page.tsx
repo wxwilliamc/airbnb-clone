@@ -4,7 +4,7 @@ import getListingById from "@/app/actions/getListingById"
 import getReservations from "@/app/actions/getReservations";
 // Components
 import EmptyState from "@/app/components/EmptyState";
-import ListingClient from "./ListingClient";
+import ListingClient from "./components/ListingClient";
 
 interface IParams {
     listingId?: string
@@ -18,7 +18,7 @@ const ListingPage = async ({ params }: { params: IParams }) => {
     if(!listing){
         return (
             <EmptyState 
-                title="No available listings"
+                title="No listings available"
                 subtitle="Try again later!"
             />
         )

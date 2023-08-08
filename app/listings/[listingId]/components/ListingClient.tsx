@@ -1,9 +1,9 @@
 "use client";
 // Components
 import Container from "@/app/components/Container";
-import ListingHead from "@/app/components/listings/listingHead";
-import ListingInfo from "@/app/components/listings/listingInfo";
-import ListingReservation from "@/app/components/listings/listingReservation";
+import ListingHead from "@/app/components/listings/ListingHead";
+import ListingInfo from "@/app/components/listings/ListingInfo";
+import ListingReservation from "@/app/components/listings/ListingReservation";
 // Category Data
 import { categories } from "@/app/components/navbar/categories";
 // Hooks
