@@ -1,17 +1,17 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
-import Modal from "./modal";
+import Modal from "./Modal";
 import useSearchModal from "@/app/hooks/useSearchModal";
 import { useCallback, useMemo, useState } from "react";
 import { Range } from "react-date-range";
 import dynamic from "next/dynamic";
-import CountrySelect, { CountrySelectValue } from "../inputs/countrySelect";
+import CountrySelect, { CountrySelectValue } from "../inputs/CountrySelect";
 import qs from "query-string";
 import { formatISO } from "date-fns";
 import Heading from "../Heading";
-import Calendar from "../inputs/calendar";
-import Counter from "../inputs/counter";
+import Calendar from "../inputs/Calendar";
+import Counter from "../inputs/Counter";
 
 enum STEPS {
     LOCATION = 0,

@@ -15,12 +15,13 @@ import Counter from '../inputs/Counter';
 import ImageUpload from '../inputs/ImageUpload';
 import Input from '../inputs/Input';
 // Categories Data
-import { categoriesList } from '../navbar/categories';
+
 // Next Module
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
 // Axios
 import axios from 'axios';
+import { categoriesList } from '../navbar/Categories';
 
 enum STEPS {
     CATEGORY = 0,

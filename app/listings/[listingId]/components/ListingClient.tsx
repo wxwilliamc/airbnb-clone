@@ -5,7 +5,7 @@ import ListingHead from "@/components/listings/ListingHead";
 import ListingInfo from "@/components/listings/ListingInfo";
 import ListingReservation from "@/components/listings/ListingReservation";
 // Category Data
-import { categoriesList } from "@/components/navbar/Categories";
+
 // Hooks
 import useLoginModal from "@/app/hooks/useLoginModal";
 // Types
@@ -21,6 +21,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { Range } from "react-date-range";
 // Toaster
 import { toast } from "react-hot-toast";
+import { categoriesList } from "@/components/navbar/Categories";
 
 // Initial Date
 const initialDataRange = {
