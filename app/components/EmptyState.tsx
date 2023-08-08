@@ -1,11 +1,10 @@
 "use client";
 // Next Module
 import { useRouter } from "next/navigation"
-// 
 import Heading from "./Heading";
 import Button from "./Button";
 
-interface EmptyState {
+interface EmptyStateProps {
     title?: string
     subtitle?: string
     showReset?: boolean
@@ -15,7 +14,7 @@ const EmptyState = ({
     title = 'No exact matches',
     subtitle = 'Try changing or removing some of your filters',
     showReset
-}: EmptyState) => {
+}: EmptyStateProps) => {
 
     const router = useRouter();
 

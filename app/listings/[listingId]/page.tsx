@@ -4,7 +4,7 @@ import getListingById from "@/app/actions/getListingById"
 import getReservations from "@/app/actions/getReservations";
 // Components
 import EmptyState from "@/app/components/EmptyState";
-import ListingClient from "@/app/listings/[listingId]/ListingClient";
+import ListingClient from "./ListingClient";
 
 interface IParams {
     listingId?: string

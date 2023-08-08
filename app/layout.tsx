@@ -8,7 +8,7 @@ import LoginModal from '@/app/components/modals/loginModal'
 import RentModal from '@/app/components/modals/rentModal'
 import SearchModal from '@/app/components/modals/searchModal'
 // Toaster
-import ToasterProvider from './providers/ToasterProvider'
+import ToasterProvider from '@/app/providers/ToasterProvider'
 // Actions
 import getCurrentUser from './actions/getCurrentUser'
 
