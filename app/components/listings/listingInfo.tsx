@@ -5,8 +5,8 @@ import { SafeUser } from "@/app/types";
 // React Icon
 import { IconType } from "react-icons";
 // Components
-import Avatar from "../Avatar";
-import ListingCategory from "./listingCategory";
+import Avatar from "../Avatar"; 
+import ListingCategory from "./ListingCategory";
 // Next Module
 import dynamic from "next/dynamic";
 

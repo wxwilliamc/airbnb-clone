@@ -1,6 +1,6 @@
 // Components
 import EmptyState from "@/app/components/EmptyState";
-import TripsClient from "./TripsClient";
+import TripsClient from "./components/TripsClient";
 // Server Actions
 import getCurrentUser from "../actions/getCurrentUser"
 import getReservations from "../actions/getReservations"

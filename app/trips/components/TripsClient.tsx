@@ -3,11 +3,12 @@
 import { useRouter } from "next/navigation"
 import Container from "@/app/components/Container"
 import Heading from "@/app/components/Heading"
-import ListingCard from "@/app/components/listings/listingCard"
-import { SafeReservation, SafeUser } from "../types"
+
+import { SafeReservation, SafeUser } from "../../types"
 import { useCallback, useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
+import ListingCard from "../../components/listings/ListingCard";
 
 interface TripsClientProps {
     reservations: SafeReservation[]

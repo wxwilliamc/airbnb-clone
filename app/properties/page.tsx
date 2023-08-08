@@ -1,6 +1,6 @@
 
 import EmptyState from "@/app/components/EmptyState";
-import PropertiesClient from "./PropertiesClient";
+import PropertiesClient from "./components/PropertiesClient";
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import getListings from "@/app/actions/getListing";
 
