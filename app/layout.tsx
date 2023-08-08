@@ -2,7 +2,11 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Nunito } from 'next/font/google'
 // Components
-import { Navbar, RegisterModal, LoginModal, RentModal, SearchModal } from './components'
+import Navbar from './components/navbar/navbar'
+import RegisterModal from './components/modals/registerModal'
+import LoginModal from './components/modals/loginModal'
+import RentModal from './components/modals/rentModal'
+import SearchModal from './components/modals/searchModal'
 // Toaster
 import ToasterProvider from './providers/ToasterProvider'
 // Actions

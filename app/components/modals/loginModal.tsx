@@ -1,6 +1,4 @@
 "use client";
-// Axios
-import axios from "axios";
 // React Icons
 import { AiFillGithub } from 'react-icons/ai'
 import { FcGoogle } from 'react-icons/fc'
@@ -16,7 +14,7 @@ import Heading from "../Heading";
 import Input from "../inputs/input";
 import Button from "../Button";
 // Toaster
-import {Toaster, toast} from 'react-hot-toast'
+import {toast} from 'react-hot-toast'
 // Next Auth
 import { signIn } from 'next-auth/react'
 // Next Module
